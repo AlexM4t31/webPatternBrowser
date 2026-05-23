@@ -31,14 +31,14 @@ async function loadIndexData() {
 
 function getSelections() {
     return {
-        param1: form.elements["param1"].value,
-        param2: form.elements["param2"].value,
-        param3: form.elements["param3"].value,
-        param4: form.elements["param4"].value,
-        param5: form.elements["param5"].value,
-        param6: form.elements["param6"].value,
-        param7: form.elements["param7"].value,
-        param8: form.elements["param8"].value
+        wtDR: form.elements["wtDR"].value,
+        wtCID: form.elements["wtCID"].value,
+        wtCIL: form.elements["wtCIL"].value,
+        wtMR: form.elements["wtMR"].value,
+        mDR: form.elements["mDR"].value,
+        mCID: form.elements["mCID"].value,
+        mCIL: form.elements["mCIL"].value,
+        mMR: form.elements["mMR"].value
     };
 }
 
@@ -98,14 +98,14 @@ form.addEventListener("submit", async (event) => {
         const selected = getSelections();
 
         const lists = [
-            data.param1?.[selected.param1] ?? [],
-            data.param2?.[selected.param2] ?? [],
-            data.param3?.[selected.param3] ?? [],
-            data.param4?.[selected.param4] ?? [],
-            data.param5?.[selected.param5] ?? [],
-            data.param6?.[selected.param6] ?? [],
-            data.param7?.[selected.param7] ?? [],
-            data.param8?.[selected.param8] ?? []
+            data.wtDR?.[selected.wtDR] ?? [],
+            data.wtCID?.[selected.wtCID] ?? [],
+            data.wtCIL?.[selected.wtCIL] ?? [],
+            data.wtMR?.[selected.wtMR] ?? [],
+            data.mDR?.[selected.mDR] ?? [],
+            data.mCID?.[selected.mCID] ?? [],
+            data.mCIL?.[selected.mCIL] ?? [],
+            data.mMR?.[selected.mMR] ?? []
         ];
 
         currentMatches = intersectLists(lists);
